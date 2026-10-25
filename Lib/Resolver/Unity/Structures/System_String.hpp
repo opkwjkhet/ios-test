@@ -1,5 +1,7 @@
 #pragma once
 
+#include <climits>
+
 #if defined(__clang__)
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wtautological-undefined-compare"
@@ -38,7 +40,7 @@ namespace Unity
             
             std::string retStr;
             mbstate_t state = mbstate_t();
-            char buf[MB_CUR_MAX];
+            char buf[MB_LEN_MAX];
             
             for (int32_t i = 0; i < m_iLength; ++i)
             {
