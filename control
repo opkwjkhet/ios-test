@@ -1,0 +1,10 @@
+Package: Zexis
+Name:  Mod Menu 
+Version: 1
+Architecture: iphoneos-arm
+Description: Feature-rich mod menu for @@APPNAME@@. Unlock new possibilities and enhance your gameplay. Designed for iOSGods.com users.
+Maintainer: Batchh (https://iosgods.com/profile/10738750-batchh/)
+Author: @@USER@@
+Section: Tweaks
+Depends: mobilesubstrate
+Homepage: iOSGods.com
