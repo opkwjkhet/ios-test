@@ -178,9 +178,7 @@
   static ModMenu *sharedInstance = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    CGRect frame = CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width,
-                              UIScreen.mainScreen.bounds.size.height);
-    sharedInstance = [[ModMenu alloc] initWithFrame:frame];
+    sharedInstance = [[ModMenu alloc] initWithFrame:CGRectZero];
     sharedInstance.maxButtons = 6;
   });
   return sharedInstance;
@@ -213,6 +211,9 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
   UIWindow *window = [self getWindow];
+  if (window) {
+    frame = window.bounds;
+  }
   self = [super initWithFrame:frame];
   if (self) {
     self.backgroundColor = [UIColor clearColor];
